@@ -1,0 +1,6 @@
+Service:
+   targetPort: 3306
+statefulset:
+   imageURL: mohammadmunna1234/mysql
+   imageVersion: v1
+   
