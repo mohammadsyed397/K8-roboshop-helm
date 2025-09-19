@@ -1,0 +1,4 @@
+service:
+   targetPort: 6379
+statefulset:
+   imageVersion: 7
