@@ -1,5 +1,4 @@
-service:
-  targerPort: 8080
+
 deployment:
   replicas: 1
   imageURL: mohammadmunna1234/frontend
