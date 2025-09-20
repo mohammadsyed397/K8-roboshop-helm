@@ -2,6 +2,6 @@ service:
   targerPort: 8080
 deployment:
   replicas: 3
-  imageURL: mohammadmunna1234/catalogue:v1
+  imageURL: mohammadmunna1234/catalogue
   imageVersion: v1 
   
