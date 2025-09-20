@@ -14,7 +14,7 @@ spec:
       project: roboshop
       tier: database # has to match .spec.template.metadata.labels
   serviceName: "redis-headless" # this should be headless service
-  replicas: 2 # by default is 1
+  replicas: 1 # by default is 1
   template:
     metadata:
       labels:
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: "redis:{{ .values.statefulset.imageVersion }}"
+        image: "redis:{{ .Values.statefulset.imageVersion }}"
         volumeMounts:
         - name: redis-data
           mountPath: /data
