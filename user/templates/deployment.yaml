@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: user
-        image: "{{ .Values.deployment.imageURL}}:{{ .values.deployment.imageVersion }}"
+        image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion }}"
         resources:
           requests:
            cpu: "50m"
