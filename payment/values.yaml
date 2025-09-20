@@ -1,6 +1,6 @@
 service:
   targerPort: 8080
 deployment:
-  replicas: 3
+  replicas: 1
   imageURL: mohammadmunna1234/payment
   imageVersion: v1 
