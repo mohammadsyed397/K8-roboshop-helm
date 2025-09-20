@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment
+  namespace: roboshop
+  # deployment labels
+  labels:
+    component: payment
+    project: roboshop
+    tier: app
+spec:
+  replicas: 1
+  # These are the labels replica set use to create pod replicas, this should match pod labels
+  selector:
+    matchLabels:
+      component: payment
+      project: roboshop
+      tier: app
+  # This is pod definition
+  template:
+    metadata:
+      labels:
+        component: payment
+        project: roboshop
+        tier: app
+    spec:
+      containers:
+      - name: payment
+        image: joindevops/payment:v1
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "128Mi"
+          limits:
+            cpu: "100m"
+            memory: "256Mi"
+        envFrom:
+        - configMapRef:
+            name: payment
+        - secretRef:
+            name: payment
