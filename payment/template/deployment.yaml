@@ -9,7 +9,7 @@ metadata:
     project: roboshop
     tier: app
 spec:
-  replicas: {{ .values.deployment.replicas }}
+  replicas: {{ .Values.deployment.replicas }}
   # These are the labels replica set use to create pod replicas, this should match pod labels
   selector:
     matchLabels:
@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: payment
-        image: "{{ .values.deployment.imageURL}}:{{ .values.deployment.imageVersion}}"
+        image: "{{ .Values.deployment.imageURL}}:{{ .Values.deployment.imageVersion}}"
         resources:
           requests:
             cpu: "50m"
