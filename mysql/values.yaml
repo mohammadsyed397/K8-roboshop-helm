@@ -1,4 +1,4 @@
-Service:
+service:
    targetPort: 3306
 statefulset:
    imageURL: mohammadmunna1234/mysql
