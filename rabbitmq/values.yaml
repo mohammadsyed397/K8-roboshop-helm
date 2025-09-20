@@ -1,4 +1,4 @@
-Service:
+service:
    targetPort: 5672
 statefulset:
    imageVersion: v1
