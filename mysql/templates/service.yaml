@@ -15,4 +15,4 @@ spec:
   ports:
   - protocol: TCP
     port: 3306 # service port
-    targetPort: {{ .Values.service.targetPort }}
+    targetPort: {{ .values.service.targetPort }}
